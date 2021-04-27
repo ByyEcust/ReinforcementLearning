@@ -1,14 +1,10 @@
 # ReinforcementLearning
 The codes used for Wechat public account "MLearningNotes" as shown below:
 
-<img src="https://user-images.githubusercontent.com/44164128/116200200-a0bc5080-a76a-11eb-90a6-72ab9314a9bc.jpg" width = "100" height = "100" div align=center />
-<div align="center">![二维码](https://user-images.githubusercontent.com/44164128/116200200-a0bc5080-a76a-11eb-90a6-72ab9314a9bc.jpg)</div>
-![二维码](https://user-images.githubusercontent.com/44164128/116200789-54bddb80-a76b-11eb-81d7-657e869fc031.jpg)
-
 <div align=center>
 	<img src="https://user-images.githubusercontent.com/44164128/116200200-a0bc5080-a76a-11eb-90a6-72ab9314a9bc.jpg" width = "100" height = "100">
 </div>
-  
+
 - DQN
   - Use DQN to develop an policy to play flappy bird
   - Run main_train_dqn.py directly to train an agent without priori knowledge, you can also config the train configurations in this file

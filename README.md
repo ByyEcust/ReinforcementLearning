@@ -1,9 +1,9 @@
 # ReinforcementLearning
 The codes used for Wechat public account "MLearningNotes" as shown below:
 
-
+<div align='center' >
 ![二维码](https://user-images.githubusercontent.com/44164128/116200200-a0bc5080-a76a-11eb-90a6-72ab9314a9bc.jpg)
-
+</div>
 
 - DQN
   - Use DQN to develop an policy to play flappy bird

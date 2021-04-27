@@ -2,7 +2,7 @@
 The codes used for Wechat public account "MLearningNotes" as shown below:
 
 <img src="https://user-images.githubusercontent.com/44164128/116200200-a0bc5080-a76a-11eb-90a6-72ab9314a9bc.jpg" width = "100" height = "100" div align=center />
-<div align=center>![二维码](https://user-images.githubusercontent.com/44164128/116200200-a0bc5080-a76a-11eb-90a6-72ab9314a9bc.jpg)</div>
+<div align="center">![二维码](https://user-images.githubusercontent.com/44164128/116200200-a0bc5080-a76a-11eb-90a6-72ab9314a9bc.jpg)</div>
   
   
 - DQN

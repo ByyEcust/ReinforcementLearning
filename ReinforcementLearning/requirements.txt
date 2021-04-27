@@ -1,0 +1,6 @@
+pygame~=2.0.1
+numpy~=1.15.1
+argparse~=1.4.0
+scikit-image~=0.14.0
+matplotlib~=2.2.3
+torch~=1.2.0

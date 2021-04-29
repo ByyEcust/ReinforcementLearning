@@ -1,4 +1,4 @@
-from q_learning.q_leaning import QLearning
+from q_learning.q_learning import QLearning
 from game.climb_mountains.climb_mountains import ClimbMountain
 import time
 import matplotlib.pyplot as plt

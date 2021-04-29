@@ -1,4 +1,4 @@
-from sarsa0.sarsa import SARSA
+from sarsa_.sarsa import SARSA
 from game.climb_mountains.climb_mountains import ClimbMountain
 import time
 import matplotlib.pyplot as plt

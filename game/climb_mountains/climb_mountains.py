@@ -1,7 +1,9 @@
 import copy
 import matplotlib.pyplot as plt
-import numpy as np
 import json
+
+
+PUNISHMENT = 1e3
 
 
 class ClimbMountain(object):
@@ -41,56 +43,30 @@ class ClimbMountain(object):
             if y-1 >= 0:
                 state = [x, y-1]
             else:
-                return [x, y-1], -1, True
+                return [x, y], -PUNISHMENT, True
         elif action == 2:
             if x-1 >= 0:
                 state = [x-1, y]
             else:
-                return [x-1, y], -1, True
+                return [x, y], -PUNISHMENT, True
         elif action == 3:
             if y+1 < self.width:
                 state = [x, y+1]
             else:
-                return [x, y+1], -1, True
+                return [x, y], -PUNISHMENT, True
         elif action == 4:
             if x+1 < self.length:
                 state = [x+1, y]
             else:
-                return [x+1, y], -1, True
+                return [x, y], -PUNISHMENT, True
 
         self.current_loc = state
         done = state == self.target
-        self.view()
         return copy.copy(state), 0 if done else -self.height[state[1]][state[0]], done
 
-    def view(self):
-        plt.cla()
-        plt.fill_between(np.linspace(0, self.length, self.length), 0, self.width, color="green")
-        plt.xticks(np.linspace(0.5, self.length-0.5, self.length))
-        self.ax.set_xticklabels(list(range(1, self.length+1)))
-        miloc = plt.MultipleLocator(1)
-        self.ax.xaxis.set_minor_locator(miloc)
-        plt.yticks(np.linspace(0.5, self.width - 0.5, self.width))
-        self.ax.set_yticklabels(list(range(1, self.width + 1)))
-        miloc = plt.MultipleLocator(1)
-        self.ax.yaxis.set_minor_locator(miloc)
-        plt.grid(True, which="minor")
-        rec_current = plt.Rectangle(tuple(self.current_loc), 1, 1, facecolor="red")
-        self.ax.add_patch(rec_current)
-        rec_target = plt.Rectangle(tuple(self.target), 1, 1, facecolor="orange")
-        self.ax.add_patch(rec_target)
+    def state2num(self, state):
+        return state[0] * self.width + state[1]
 
-        for i in range(self.width):
-            for j in range(self.length):
-                if j == self.current_loc[0] and i == self.current_loc[1]:
-                    plt.text(j + 0.5, i + 0.5, "S")
-                elif j == self.target[0] and i == self.target[1]:
-                    plt.text(j + 0.5, i + 0.5, "T")
-                else:
-                    plt.text(j+0.5, i+0.5, str(self.height[i][j]))
-
-        plt.xlim([0, self.length])
-        plt.ylim([0, self.width])
 
 
 
